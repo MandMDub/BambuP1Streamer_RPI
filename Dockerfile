@@ -5,8 +5,8 @@ FROM debian:12
 
 RUN mkdir -p /app
 
-COPY build/BambuP1Streamer build/go2rtc_linux_amd64 build/libBambuSource.so go2rtc.yaml /app
+COPY build/BambuP1Streamer build/go2rtc_linux_arm build/libBambuSource.so go2rtc.yaml /app
 
 WORKDIR /app
 
-CMD [ "./go2rtc_linux_amd64" ]
+CMD [ "./go2rtc_linux_arm" ]
